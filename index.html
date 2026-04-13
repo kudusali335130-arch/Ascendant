@@ -2071,7 +2071,6 @@
                             shadowString = skillsArr.map((s, idx) => `0 0 ${10 + idx*5}px ${window.getSkillColor(s)}`).join(', '); cell.setAttribute('data-hover-border', window.getSkillColor(skillsArr[0])); 
                         }
                         cell.setAttribute('data-hover-glow', shadowString);
-                        
                         cell.onmouseenter = () => { cell.style.boxShadow = cell.getAttribute('data-hover-glow'); cell.style.borderColor = cell.getAttribute('data-hover-border'); cell.style.transform = 'scale(1.15)'; cell.style.color = '#fff'; cell.style.zIndex = '10'; };
                         cell.onmouseleave = () => { cell.style.boxShadow = ''; cell.style.borderColor = ''; cell.style.transform = ''; cell.style.color = ''; cell.style.zIndex = ''; };
                     }
